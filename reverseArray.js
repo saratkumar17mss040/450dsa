@@ -1,4 +1,4 @@
-// Write a program to reverse an array or string
+// Write a program to reverse an array
 
 // Solution 1
 
@@ -41,8 +41,6 @@ function reverseArray3(arr1, str1) {
 	var temp;
 	var low = 0;
 	var high = arr1.length - 1;
-	var lowStr = 0;
-	var strHigh = str1.length - 1;
 
 	// TIME COMPLEXITY - O(n)
 	while (low < high) {
@@ -53,19 +51,7 @@ function reverseArray3(arr1, str1) {
 		high--;
 	}
 
-	temp = undefined;
-
-	// TIME COMPLEXITY - O(n) - NOT WORKING !
-	while (lowStr < strHigh) {
-		temp = str1[lowStr];
-		str1[lowStr] = str1[strHigh];
-		str1[strHigh] = temp;
-		lowStr++;
-		strHigh--;
-	}
-
 	console.log(arr1);
-	console.log(str1);
 }
 
 reverseArray3(arr1, str1);
@@ -89,23 +75,4 @@ function reverseArray4(arr1, low, high) {
 	reverseArray4(arr1, low + 1, high - 1);
 }
 
-reverseArray4(arr1,0,arr1.length - 1);
-
-// RECURSIVE APPROACH FOR STRINGS - NOT WORKING !
-
-function reverseStr(str1, low, high) {
-	var temp;
-
-	if (low >= high) {
-		console.log(str1);
-		return;
-	}
-
-	// TIME COMPLEXITY - O(n)
-	temp = str1[low];
-	str1[low] = str1[high];
-	str1[high] = temp;
-	reverseStr(str1, low + 1, high - 1);
-}
-
-reverseStr(str1, 0, str1.length - 1);
+reverseArray4(arr1, 0, arr1.length - 1);
