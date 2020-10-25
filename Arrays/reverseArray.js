@@ -1,4 +1,4 @@
-// Write a program to reverse an array
+// Write a program to reverse an array or string 
 
 // Solution 1
 
