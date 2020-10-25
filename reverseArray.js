@@ -10,7 +10,7 @@ function reverseArray1(arr1, str1) {
 	console.log(str1.split('').reverse().join(''));
 }
 
-reverseArray1(arr1, str1);
+// reverseArray1(arr1, str1);
 
 // Solution 2
 
@@ -32,7 +32,7 @@ function reverseArray2(arr1, str1) {
 	console.log(str2);
 }
 
-reverseArray2(arr1, str1);
+// reverseArray2(arr1, str1);
 
 // Solution 3 - ITERATIVE APPROACH FOR ARRAYS AND STRINGS
 
@@ -55,7 +55,7 @@ function reverseArray3(arr1, str1) {
 
 	temp = undefined;
 
-	// TIME COMPLEXITY - O(n)
+	// TIME COMPLEXITY - O(n) - NOT WORKING !
 	while (lowStr < strHigh) {
 		temp = str1[lowStr];
 		str1[lowStr] = str1[strHigh];
@@ -89,7 +89,7 @@ function reverseArray4(arr1, low, high) {
 	reverseArray4(arr1, low + 1, high - 1);
 }
 
-reverseArray4(arr1,0,arr1.length - 1);
+// reverseArray4(arr1,0,arr1.length - 1);
 
 // RECURSIVE APPROACH FOR STRINGS - NOT WORKING !
 
@@ -108,4 +108,4 @@ function reverseStr(str1, low, high) {
 	reverseStr(str1, low + 1, high - 1);
 }
 
-reverseStr(str1, 0, str1.length - 1);
+// reverseStr(str1, 0, str1.length - 1);
