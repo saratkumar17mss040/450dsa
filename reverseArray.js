@@ -6,7 +6,8 @@ const arr1 = [1, 2, 3];
 const str1 = '1234';
 
 function reverseArray1(arr1, str1) {
-	console.log(arr1.reverse());
+    console.log(arr1.reverse());
+    // reversed string just to know built-ins in js
 	console.log(str1.split('').reverse().join(''));
 }
 
