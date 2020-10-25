@@ -38,7 +38,7 @@ reverseArray2(arr1, str1);
 // Solution 3 - ITERATIVE APPROACH FOR ARRAYS AND STRINGS
 
 // NOT WORKING FOR STRINGS !
-function reverseArray3(arr1, str1) {
+function reverseArray3(arr1) {
 	var temp;
 	var low = 0;
 	var high = arr1.length - 1;
