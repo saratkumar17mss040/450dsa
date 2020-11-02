@@ -1,7 +1,7 @@
 // Given an array which consists of only 0, 1 and 2. Sort the array without using any sorting algo
 // https://practice.geeksforgeeks.org/problems/sort-an-array-of-0s-1s-and-2s/0
 
-// Solution - TIME COMPLEXITY - O(n^2)
+// Solution - TIME COMPLEXITY - O(n)
 
 const sort = (arr) => {
 	var newArray = [];
