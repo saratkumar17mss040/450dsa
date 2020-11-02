@@ -1,4 +1,5 @@
-// Write a program to reverse an array or string 
+// Write a program to reverse an array or string - 
+// https://www.geeksforgeeks.org/write-a-program-to-reverse-an-array-or-string/
 
 // Solution 1
 
@@ -35,9 +36,8 @@ function reverseArray2(arr1, str1) {
 
 reverseArray2(arr1, str1);
 
-// Solution 3 - ITERATIVE APPROACH FOR ARRAYS AND STRINGS
+// Solution 3 - ITERATIVE APPROACH FOR ARRAYS
 
-// NOT WORKING FOR STRINGS !
 function reverseArray3(arr1) {
 	var temp;
 	var low = 0;
@@ -55,14 +55,12 @@ function reverseArray3(arr1) {
 	console.log(arr1);
 }
 
-reverseArray3(arr1, str1);
+reverseArray3(arr1);
 
 // Solution 4 - RECURSIVE APPROACH FOR ARRAYS
 
 function reverseArray4(arr1, low, high) {
 	var temp;
-	// var low = 0;
-	// var high = arr1.length - 1;
 
 	if (low >= high) {
 		console.log(arr1);

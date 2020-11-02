@@ -1,4 +1,5 @@
 // Find the maximum and minimum element in an array
+// https://www.geeksforgeeks.org/maximum-and-minimum-in-an-array/
 
 // Solution - 1
 
