@@ -13,7 +13,8 @@ function rotate1(arr) {
 
 // Solution 2
 function rotate2(arr) {
-	return arr.unshift(arr.pop(arr[arr.length - 1]));
+	arr.unshift(arr.pop());
+	return arr;
 }
 
 var arr = [1, 2, 3, 4, 5];
