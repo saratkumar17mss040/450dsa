@@ -1,44 +1,19 @@
-function sum(currentSubArray) {
-	return currentSubArray.reduce((ele, acc) => ele + acc, 0);
-}
+// find Largest sum contiguous Subarray [V. IMP]
+// https://practice.geeksforgeeks.org/problems/kadanes-algorithm-1587115620/1
 
-// O(n + n^2 + n^2)
-// O(n + 2n^2)
-// O(n^2)
+// using kandane's algorithm
+
+// Solution - TIME COMPLEXITY - O(n)
 
 function maxSubArray(arr) {
-	var max_sum = arr[0];
-
-	// O(n)
-	for (let i = 1; i < arr.length - 1; i++) {
-		if (max_sum < arr[i]) max_sum = arr[i];
+	let maxSoFar = Number.MIN_VALUE,
+		maxEnd = 0;
+	for (let i = 0; i < arr.length; i++) {
+		maxEnd = maxEnd + arr[i];
+		if (maxSoFar < maxEnd) maxSoFar = maxEnd;
+		else if (maxEnd < 0) maxEnd = 0;
 	}
-
-	var len = arr.length;
-
-	// O(n^2)
-	for (let i = 0; i < len; i++) {
-		let current_sum = sum(arr.slice(i, len));
-		if (len === 1) break;
-		if (max_sum < current_sum) {
-			max_sum = current_sum;
-		}
-		len--;
-	}
-
-	// O(n^2)
-	for (let i = 1; i < len - 1; i++) {
-		// O(n)
-		let current_sum = sum(arr.slice(i)); // O(n)
-		if (max_sum < current_sum) {
-			// O(1)
-			max_sum = current_sum;
-		}
-	}
-	console.log(max_sum);
-	return max_sum;
+	return maxSoFar;
 }
 
-console.log(maxSubArray([1, 2, 3, -2, 5]));
-console.log(maxSubArray([-1, -2, -3, -4]));
-console.log(maxSubArray([-1, -2, 3, 4, -1]));
+console.log(maxSubArray([-2, -3, 4, -1, -2, 1, 5, -3]));

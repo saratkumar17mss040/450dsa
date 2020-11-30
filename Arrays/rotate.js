@@ -1,7 +1,8 @@
 // Write a program to cyclically rotate an array by one.
 // https://practice.geeksforgeeks.org/problems/cyclically-rotate-an-array-by-one/0
 
-// Solution 1 - TIME COPLEXITY - O(n)
+// Solution 1 - TIME COMPLEXITY - O(n)
+
 function rotate1(arr) {
 	var last = arr[arr.length - 1];
 	for (let i = arr.length - 1; i >= 0; i--) {
@@ -12,6 +13,7 @@ function rotate1(arr) {
 }
 
 // Solution 2
+
 function rotate2(arr) {
 	arr.unshift(arr.pop());
 	return arr;
